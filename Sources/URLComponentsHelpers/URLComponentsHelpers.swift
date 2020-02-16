@@ -35,9 +35,9 @@ public extension URLComponents {
     
 }
 
-extension Array where Element == URLQueryItem {
+public extension Array where Element == URLQueryItem {
     
-    subscript(named name: String) -> String? {
+    subscript(_ name: String) -> String? {
         return first(where: { $0.name == name })?.value
     }
     
