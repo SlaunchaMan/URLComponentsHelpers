@@ -34,3 +34,11 @@ public extension URLComponents {
     }
     
 }
+
+extension Array where Element == URLQueryItem {
+    
+    subscript(_ name: String) -> String? {
+        return first(where: { $0.name == name })?.value
+    }
+    
+}
